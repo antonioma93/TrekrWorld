@@ -20,8 +20,9 @@ struct TipsView: View {
         NavigationView {
             List(tips, id: \.text, children: \.children) { tip in
                 if tip.children != nil {
-                    Label(tip.text, systemImage: "quote.bubble")
+					Label(tip.text, systemImage: "bookmark.circle")
                         .font(.headline)
+
                 } else {
                     Text(tip.text)
                 }

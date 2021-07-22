@@ -39,7 +39,7 @@ struct LocationView: View {
                 Text(location.advisory)
 
                 HStack {
-                    Spacer()
+					Spacer()
 
 					Button(dataController.isFavorite(location) ? "Remove Favorite" : "Add Favorite", action: toggleFavorite)
 						.buttonStyle(PrimaryButtonStyle())
@@ -49,7 +49,7 @@ struct LocationView: View {
 
                     Spacer()
                 }
-                .padding(.bottom)
+				.padding()
             }
             .padding(.horizontal)
         }
@@ -84,8 +84,8 @@ extension Text {
 	func headerStyle() -> some View {
 		self
 			.font(.title2)
-			.foregroundColor(.secondary)
-			.fontWeight(.black)
+			.foregroundColor(.blue)
+			.fontWeight(.bold)
 			.textCase(.uppercase)
 	}
 }
